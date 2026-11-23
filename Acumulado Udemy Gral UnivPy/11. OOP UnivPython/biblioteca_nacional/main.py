@@ -21,4 +21,4 @@ print(f"todos los libros de la Biblioteca: {biblio1.nombre}")
 biblio1.mostrar_todos()
 
 
-#TODO ESTO LO PUEDO METER A UN LOOP A UN BANCO Y AHORRARME ESTE RETRABAJO
+# TODO ESTO LO PUEDO METER A UN LOOP A UN BANCO Y AHORRARME ESTE RETRABAJO
