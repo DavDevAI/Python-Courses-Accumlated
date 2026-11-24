@@ -19,6 +19,10 @@ class Animal:
 
     def __init__(self):
         pass
+
+    def hacer_sonido(self): 
+        print("hago un pitido")
+
     def comer(self):
         print('Como muchas veces al día')
 
@@ -29,27 +33,32 @@ class Animal:
 
 
 class Perro (Animal): 
-
+    # pass
     def __init__(self):
         super().__init__()
 
     def hacer_sonido(self):
         print('Puedo ladrar')
-    
-    #sobreescrituura del metodo dormir 
-    def dormir(self):
-        print('Duermo 15 horas al dia')
+
+class Gato (Animal): 
+     def hacer_sonido(self):
+            print('Puedo maullarr')
         
 
 #main loop
-print("Ejemplo de herencia en pythoon")
+print("Ejemplo de polimorfismo")
 print("Clase padre soy un animal")
 animal1 = Animal()
-animal1.comer()
-animal1.dormir()
+animal1.hacer_sonido() # el definido en la clase padre
 
-print ("ejemplo de la clase hija")
+print ("ejemplo de la clase hija perro")
 perro = Perro()
-perro.comer() 
-perro.dormir() # se manda a llamar el metodo sobre escrito por la clase hija
-perro.hacer_sonido()
+perro.hacer_sonido() # el metodo de la clase hija pero del tipo perro, si quito la sobre escritura y NOO HAY OTRA CLASE, se va directo a llamar 
+#A LA DE LA CLASE PADRE, SI NO HAY OTRA HIJA, si si lo hay como abajo que es otra de menor jerarquía se iría con la del  gato que tambien esta sobreescribiendo
+# el mismo metodo de la clase padre, aqui es donde se aplica el POLIMORFISMO, que estipula que la clase se va a comportar de multiples maneras
+#dependiendo del tipo de dato con el que estamos trabajando y si eciste o no sobreescritura, si existe el que se manda a llamar en el de la clase 
+#hija o de menor jerarquia
+
+print("ejemplo de la clase hija gato")
+gato = Gato ()
+gato.hacer_sonido() # en este caso el que se manda a llamar es el sobre escrito en la clase hija, en este caso el ultiomo que es la de gato
